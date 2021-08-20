@@ -11,6 +11,8 @@
 
 //source: questions are from this site - https://www.welovequizzes.com/soccer-quiz-questions-and-answers/
 
+//make sure to ask about this^ even though its prob fine
+
 const questionList = {
   number1: {
     question: "Who is the greatest soccer player?",
@@ -25,13 +27,35 @@ const questionList = {
   },
 };
 
-const questionInput = questionList.number1.question;
+const container = document.querySelector(".top-container");
+
+const newQuestion = document.createElement("h2");
+
+const questionGenerator = () => {
+  //   console.log("hi");
+  container.append(newQuestion);
+};
+
+const inputQuestion1 = questionList.number1.question;
+
+newQuestion.innerHTML = inputQuestion1;
+
+// container.append(newQuestion);
+// questionGenerator();
+
+const testButton = document.querySelector(".test-button");
+
+document.addEventListener("click", () => {
+  questionGenerator();
+});
+
 const answerInput = questionList.number1.answers;
 const correctInput = questionList.number1.correctAnswer;
 
+// const sampleQuestion = inputQuestion1;
 // const testInput = questionList.number1.correctAnswer;
 
-console.log(questionInput);
+console.log(inputQuestion1);
 console.log(answerInput);
 console.log(answerInput[0]);
 console.log(correctInput);
