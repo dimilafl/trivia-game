@@ -104,21 +104,25 @@ answerB.addEventListener("click", () => {
   //add condition that checks match for correct answer
   console.log("hi");
 });
-answerC.addEventListener("click", () => {
+answerC.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi");
+  console.log(event.currentTarget);
 });
-newAnswersButton0.addEventListener("click", () => {
+newAnswersButton0.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi a");
+  console.log(event.currentTarget);
 });
-newAnswersButton1.addEventListener("click", () => {
+newAnswersButton1.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi b");
+  console.log(event.currentTarget);
 });
-newAnswersButton2.addEventListener("click", () => {
+newAnswersButton2.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi c");
+  console.log(event.currentTarget);
 });
 
 const correctInput = questionList.number1.correctAnswer;
