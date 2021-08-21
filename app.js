@@ -15,7 +15,7 @@
 
 const questionList = {
   number1: {
-    question: "Who is the greatest soccer player?",
+    question: "Who is considered the greatest soccer player?",
     answers: ["Beckham", "Pele", "Maradona"],
     correctAnswer: "Pele",
   },
@@ -31,14 +31,32 @@ const container = document.querySelector(".top-container");
 
 const newQuestion = document.createElement("h2");
 
+//not very DRY - for loop????
+const newAnswers0 = document.createElement("h3");
+const newAnswers1 = document.createElement("h3");
+const newAnswers2 = document.createElement("h3");
+
 const questionGenerator = () => {
   //   console.log("hi");
   container.append(newQuestion);
+  container.append(newAnswers0);
+  container.append(newAnswers1);
+  container.append(newAnswers2);
 };
 
 const inputQuestion1 = questionList.number1.question;
 
 newQuestion.innerHTML = inputQuestion1;
+
+//not very DRY
+const answer1Input0 = questionList.number1.answers[0];
+const answer1Input1 = questionList.number1.answers[1];
+const answer1Input2 = questionList.number1.answers[2];
+
+//not very DRY - leave a-c????
+newAnswers0.innerHTML = "a. " + answer1Input0;
+newAnswers1.innerHTML = "b. " + answer1Input1;
+newAnswers2.innerHTML = "c. " + answer1Input2;
 
 // container.append(newQuestion);
 // questionGenerator();
@@ -49,15 +67,14 @@ document.addEventListener("click", () => {
   questionGenerator();
 });
 
-const answerInput = questionList.number1.answers;
 const correctInput = questionList.number1.correctAnswer;
 
 // const sampleQuestion = inputQuestion1;
 // const testInput = questionList.number1.correctAnswer;
 
 console.log(inputQuestion1);
-console.log(answerInput);
-console.log(answerInput[0]);
+console.log(answer1Input0);
+// console.log(answer1Input);
 console.log(correctInput);
 console.log(correctInput);
 
