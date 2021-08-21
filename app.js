@@ -41,6 +41,10 @@ const newAnswersButton1 = document.createElement("button");
 const newAnswers2 = document.createElement("h3");
 const newAnswersButton2 = document.createElement("button");
 
+newAnswersButton0.innerHTML = "click this";
+newAnswersButton1.innerHTML = "click this";
+newAnswersButton2.innerHTML = "click this";
+
 const questionGenerator = () => {
   //   console.log("hi");
   container.append(newQuestion);
@@ -106,15 +110,15 @@ answerC.addEventListener("click", () => {
 });
 newAnswersButton0.addEventListener("click", () => {
   //add condition that checks match for correct answer
-  console.log("hi");
+  console.log("hi a");
 });
 newAnswersButton1.addEventListener("click", () => {
   //add condition that checks match for correct answer
-  console.log("hi");
+  console.log("hi b");
 });
 newAnswersButton2.addEventListener("click", () => {
   //add condition that checks match for correct answer
-  console.log("hi");
+  console.log("hi c");
 });
 
 const correctInput = questionList.number1.correctAnswer;
