@@ -14,11 +14,8 @@
   /* padding: 100px 100px 0px 100px; */
 }
 .test-button {
-  /* display: flex; */
-  /* font-size: 50px; */
   color: green;
   background-color: red;
-  /* margin: 50px; */
-  /* padding: 100px; */
-  /* padding: 100px 100px 0px 100px; */
+
+  /* do similar for other buttons */
 }

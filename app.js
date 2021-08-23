@@ -65,6 +65,23 @@ newAnswersButton0.innerHTML = "click this";
 newAnswersButton1.innerHTML = "click this";
 newAnswersButton2.innerHTML = "click this";
 
+///unneccessary code
+for (let i = 1; i < 5; i++) {
+  // console.log(i);
+  // console.log(questionList.number);
+  // console.log(questionList.number + i);
+  // questionList.length
+  // console.log(questionList[i]);
+  // console.log(questionList);
+}
+
+//iterating through the variable list
+for (let number in questionList) {
+  console.log(number);
+  console.log(questionList[number]);
+  console.log("~~~~~~~~~~~~~");
+}
+
 //not very DRY
 const answer1Input0 = questionList.number1.answers[0];
 const answer1Input1 = questionList.number1.answers[1];
