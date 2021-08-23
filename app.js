@@ -139,8 +139,12 @@ newAnswersButton0.addEventListener("click", (event) => {
 
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
+
+    event.currentTarget.style.color = "green";
   } else {
     console.log("wrong");
+
+    event.currentTarget.style.color = "red";
   }
 });
 newAnswersButton1.addEventListener("click", (event) => {
@@ -155,8 +159,12 @@ newAnswersButton1.addEventListener("click", (event) => {
 
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
+
+    event.currentTarget.style.color = "green";
   } else {
     console.log("wrong");
+
+    event.currentTarget.style.color = "red";
   }
 });
 newAnswersButton2.addEventListener("click", (event) => {
@@ -168,11 +176,14 @@ newAnswersButton2.addEventListener("click", (event) => {
   // console.log("~~~~~~~~~~~~~~~");
 
   // console.log(correctInput);
-
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
+
+    event.currentTarget.style.color = "green";
   } else {
     console.log("wrong");
+
+    event.currentTarget.style.color = "red";
   }
 });
 
