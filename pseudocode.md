@@ -8,7 +8,11 @@ cl -
 else3
 cl -
 
-wanna add a scoring system to this first
+## wanna add a scoring system to this first
+
+-need to add function so score wont keep adding infinitely
+
+-change questions?
 
 now I want to add loops to change variable and iterate throughout them
 /
@@ -19,6 +23,27 @@ now I want to add loops to change variable and iterate throughout them
 /
 /
 /
+
+#----------------------------#
+8.23
+3 daily standup questions are:
+
+What did you do yesterday?
+#------#
+cleaning up comments and extra unnessary code - also added a function to check for answer against the correct answer
+
+What will you do today?
+#------#
+added score functionality - currently add/sub 1 point per right wrong answer
+
+Anything blocking your progress?
+#------#
+-need to add function so score wont keep adding indefitely (my solution) - change questions to fix this?
+
+- I want to add loops to change variable and iterate throughout them
+
+#----------------------------#
+
 3 daily standup questions are:
 
 What did you do yesterday?

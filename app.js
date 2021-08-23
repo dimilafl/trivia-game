@@ -32,9 +32,7 @@ const questionList = {
 //input variables
 
 const container = document.querySelector(".top-container");
-
 const newQuestion = document.createElement("h2");
-
 let score = 0;
 
 //not very DRY - for loop???? - not for this section because its creating HTML elements to append to
@@ -63,10 +61,11 @@ const answer1Input2 = questionList.number1.answers[2];
 
 //more input variables
 
+//question
 const inputQuestion1 = questionList.number1.question;
-
 newQuestion.innerHTML = inputQuestion1;
 
+//correct answer
 const correctInput = questionList.number1.correctAnswer;
 
 //not very DRY - leave a-c????
@@ -74,7 +73,10 @@ newAnswers0.innerHTML = "a. " + answer1Input0;
 newAnswers1.innerHTML = "b. " + answer1Input1;
 newAnswers2.innerHTML = "c. " + answer1Input2;
 
-const testButton = document.querySelector(".test-button");
+//test button
+const initialButton = document.querySelector(".test-button");
+
+//pretty sure this code does nothing
 let answerA = document.querySelector(".class-a");
 let answerB = document.querySelector(".class-b");
 let answerC = document.querySelector(".class-c");
@@ -106,11 +108,13 @@ const questionGenerator = () => {
 
 //question generator
 
-testButton.addEventListener("click", () => {
+initialButton.addEventListener("click", () => {
   questionGenerator();
 });
 
 ////////////////////////////////////////////////
+
+//answers - click function
 
 newAnswersButton0.addEventListener("click", (event) => {
   if (event.currentTarget.id === correctInput) {
@@ -131,6 +135,7 @@ newAnswersButton0.addEventListener("click", (event) => {
     scoreElement.innerText = score;
   }
 });
+
 newAnswersButton1.addEventListener("click", (event) => {
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
@@ -150,6 +155,7 @@ newAnswersButton1.addEventListener("click", (event) => {
     scoreElement.innerText = score;
   }
 });
+
 newAnswersButton2.addEventListener("click", (event) => {
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
