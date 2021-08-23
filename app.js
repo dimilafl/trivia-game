@@ -9,12 +9,6 @@
 // -ability to restart midgame
 // -new question adder (or option to pass on a current question being asked)
 
-//source: questions are from this site - https://www.welovequizzes.com/soccer-quiz-questions-and-answers/
-
-//make sure to ask about this^ even though its prob fine
-
-//organize this code to save you time later on
-
 const questionList = {
   number1: {
     question: "Who is considered the greatest soccer player?",
@@ -28,16 +22,48 @@ const questionList = {
     correctAnswer: "22",
   },
   number3: {
-    question: " How long does a soccer game last? (in min)",
+    question: "How long does a soccer game last? (in min)",
     answers: ["45", "90", "120"],
     correctAnswer: "90",
   },
   number4: {
     question:
-      "HWhich player scored the “Hand of God” goal in a match of the 1986 World Cup?",
+      "Which player scored the “Hand of God” goal in a match of the 1986 World Cup?",
     answers: ["Ronaldo", "Messi", "Maradona"],
     correctAnswer: "Maradona",
   },
+  number5: {
+    question: "Who can add time in a soccer game?",
+    answers: ["Referee", "Coach", "Captain"],
+    correctAnswer: "Referee",
+  },
+  number6: {
+    question:
+      "What is the limit of stoppage time that can be added at the end of a game",
+    answers: ["10 min", "5 min", "None"],
+    correctAnswer: "None",
+  },
+  number7: {
+    question:
+      "The minimum number of players that a soccer team needs to be eligible to play is …",
+    answers: ["7", "9", "11"],
+    correctAnswer: "7",
+  },
+  number8: {
+    question: "Which soccer player is nicknamed Zizou?",
+    answers: ["Gerrard", "Zidane", "Messi"],
+    correctAnswer: "Zidane",
+  },
+  number9: {
+    question: "Which country won the most FIFA World Cup titles?",
+    answers: ["Germany", "England", "Brazil"],
+    correctAnswer: "Brazil",
+  },
+  // number: {
+  //   question: "How",
+  //   answers: ["45", "90", "120"],
+  //   correctAnswer: "90",
+  // },
 };
 
 //input variables
