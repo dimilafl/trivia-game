@@ -33,9 +33,7 @@ const container = document.querySelector(".top-container");
 
 const newQuestion = document.createElement("h2");
 
-let score = 0;
-
-//not very DRY - for loop???? - not for this section because its creating HTML elements to append to
+//not very DRY - for loop????
 const newAnswers0 = document.createElement("h3");
 const newAnswersButton0 = document.createElement("button");
 const newAnswers1 = document.createElement("h3");
@@ -43,13 +41,6 @@ const newAnswersButton1 = document.createElement("button");
 const newAnswers2 = document.createElement("h3");
 const newAnswersButton2 = document.createElement("button");
 
-//scores
-const scoreContainer = document.querySelector(".score-container");
-const scoreElement = document.createElement("h4");
-scoreElement.innerText = score;
-scoreContainer.append(scoreElement);
-
-//button text
 newAnswersButton0.innerHTML = "click this";
 newAnswersButton1.innerHTML = "click this";
 newAnswersButton2.innerHTML = "click this";
@@ -97,74 +88,111 @@ newAnswers0.innerHTML = "a. " + answer1Input0;
 newAnswers1.innerHTML = "b. " + answer1Input1;
 newAnswers2.innerHTML = "c. " + answer1Input2;
 
+// container.append(newQuestion);
+// questionGenerator();
+
 const testButton = document.querySelector(".test-button");
 let answerA = document.querySelector(".class-a");
 let answerB = document.querySelector(".class-b");
 let answerC = document.querySelector(".class-c");
 
+//delete this
+
+// document.addEventListener("click", () => {
+//   questionGenerator();
+//   console.log("hi");
+// });
+
 testButton.addEventListener("click", () => {
   questionGenerator();
+  //   console.log("hi");
+});
+
+//this code doesn't work
+
+answerA.addEventListener("click", () => {
+  //add condition that checks match for correct answer
+  console.log("hi");
+});
+answerB.addEventListener("click", () => {
+  //add condition that checks match for correct answer
+  console.log("hi");
+});
+answerC.addEventListener("click", (event) => {
+  //add condition that checks match for correct answer
+  console.log("hi");
+
+  console.log(event.currentTarget);
 });
 
 ////////////////////////////////////////////////
 
 newAnswersButton0.addEventListener("click", (event) => {
+  //add condition that checks match for correct answer
+  // console.log("hi a");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
+
+  // console.log(correctInput);
+
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
 
     event.currentTarget.style.color = "green";
-
-    score++;
-
-    scoreElement.innerText = score;
   } else {
     console.log("wrong");
 
     event.currentTarget.style.color = "red";
-
-    score--;
-
-    scoreElement.innerText = score;
   }
 });
 newAnswersButton1.addEventListener("click", (event) => {
+  //add condition that checks match for correct answer
+  // console.log("hi b");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
+
+  // console.log(correctInput);
+
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
 
     event.currentTarget.style.color = "green";
-
-    score++;
-
-    scoreElement.innerText = score;
   } else {
     console.log("wrong");
 
     event.currentTarget.style.color = "red";
-
-    score--;
-
-    scoreElement.innerText = score;
   }
 });
 newAnswersButton2.addEventListener("click", (event) => {
+  //add condition that checks match for correct answer
+  // console.log("hi c");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
+
+  // console.log(correctInput);
   if (event.currentTarget.id === correctInput) {
     console.log("correct");
 
     event.currentTarget.style.color = "green";
-
-    score++;
-
-    scoreElement.innerText = score;
   } else {
     console.log("wrong");
 
     event.currentTarget.style.color = "red";
-
-    score--;
-
-    scoreElement.innerText = score;
   }
 });
 
-///????? whats this?
-// const answers = {};
+// const sampleQuestion = inputQuestion1;
+// const testInput = questionList.number1.correctAnswer;
+
+// console.log(inputQuestion1);
+// console.log(answer1Input0);
+// console.log(answer1Input);
+// console.log(correctInput);
+
+const answers = {};
