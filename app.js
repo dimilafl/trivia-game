@@ -45,31 +45,43 @@ newAnswersButton0.innerHTML = "click this";
 newAnswersButton1.innerHTML = "click this";
 newAnswersButton2.innerHTML = "click this";
 
+//not very DRY
+const answer1Input0 = questionList.number1.answers[0];
+const answer1Input1 = questionList.number1.answers[1];
+const answer1Input2 = questionList.number1.answers[2];
+
 const questionGenerator = () => {
-  //   console.log("hi");
   container.append(newQuestion);
+
   container.append(newAnswers0);
   container.append(newAnswersButton0);
   newAnswers0.setAttribute("class", "class-a");
   newAnswersButton0.setAttribute("class", "class-a");
+
+  newAnswersButton0.setAttribute("id", questionList.number1.answers[0]);
+
   container.append(newAnswers1);
   container.append(newAnswersButton1);
   newAnswers1.setAttribute("class", "class-b");
   newAnswersButton1.setAttribute("class", "class-b");
+
+  newAnswersButton1.setAttribute("id", questionList.number1.answers[1]);
+
   container.append(newAnswers2);
   container.append(newAnswersButton2);
-  newAnswersButton2.setAttribute("class", "class-c");
   newAnswers2.setAttribute("class", "class-c");
+  newAnswersButton2.setAttribute("class", "class-c");
+
+  newAnswersButton2.setAttribute("id", questionList.number1.answers[2]);
 };
+
+//input variables
 
 const inputQuestion1 = questionList.number1.question;
 
 newQuestion.innerHTML = inputQuestion1;
 
-//not very DRY
-const answer1Input0 = questionList.number1.answers[0];
-const answer1Input1 = questionList.number1.answers[1];
-const answer1Input2 = questionList.number1.answers[2];
+const correctInput = questionList.number1.correctAnswer;
 
 //not very DRY - leave a-c????
 newAnswers0.innerHTML = "a. " + answer1Input0;
@@ -96,6 +108,8 @@ testButton.addEventListener("click", () => {
   //   console.log("hi");
 });
 
+//this code doesn't work
+
 answerA.addEventListener("click", () => {
   //add condition that checks match for correct answer
   console.log("hi");
@@ -107,33 +121,42 @@ answerB.addEventListener("click", () => {
 answerC.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi");
+
   console.log(event.currentTarget);
 });
+
+////////////////////////////////////////////////
+
 newAnswersButton0.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi a");
   console.log(event.currentTarget);
+  console.log("~~~~~~~~~~~~~~~``");
+  console.log(event.currentTarget.id);
+
+  console.log(correctInput);
 });
 newAnswersButton1.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi b");
   console.log(event.currentTarget);
+
+  console.log(correctInput);
 });
 newAnswersButton2.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
   console.log("hi c");
   console.log(event.currentTarget);
-});
 
-const correctInput = questionList.number1.correctAnswer;
+  console.log(correctInput);
+});
 
 // const sampleQuestion = inputQuestion1;
 // const testInput = questionList.number1.correctAnswer;
 
-console.log(inputQuestion1);
-console.log(answer1Input0);
+// console.log(inputQuestion1);
+// console.log(answer1Input0);
 // console.log(answer1Input);
-console.log(correctInput);
-console.log(correctInput);
+// console.log(correctInput);
 
 const answers = {};
