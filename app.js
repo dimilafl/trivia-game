@@ -103,9 +103,16 @@ for (let i = 1; i < 5; i++) {
 
 //iterating through the variable list
 for (let number in questionList) {
-  console.log(number);
-  console.log(questionList[number]);
+  // console.log(number);
+  // console.log(questionList[number]);
+
+  //question
+
+  inputForQuestion = questionList[number].question;
+
+  console.log(inputForQuestion);
   console.log("~~~~~~~~~~~~~");
+  // newQuestion.innerHTML = inputQuestion1;
 }
 
 //not very DRY
