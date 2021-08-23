@@ -33,7 +33,7 @@ const container = document.querySelector(".top-container");
 
 const newQuestion = document.createElement("h2");
 
-//not very DRY - for loop????
+//not very DRY - for loop???? - not for this section because its creating HTML elements to append to
 const newAnswers0 = document.createElement("h3");
 const newAnswersButton0 = document.createElement("button");
 const newAnswers1 = document.createElement("h3");
