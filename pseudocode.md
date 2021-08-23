@@ -8,6 +8,8 @@ cl -
 else3
 cl -
 
+#----------------------------#
+
 ## wanna add a scoring system to this first
 
 -need to add function so score wont keep adding infinitely
@@ -15,6 +17,9 @@ cl -
 -change questions?
 
 now I want to add loops to change variable and iterate throughout them
+
+worry about HTML and CSS styling at end it just wastes time and is inefficient doing it in between
+#----------------------------#
 /
 /
 /
@@ -23,6 +28,34 @@ now I want to add loops to change variable and iterate throughout them
 /
 /
 /
+
+#----------------------------#
+8.26
+3 daily standup questions are:
+
+What did you do yesterday?
+
+What will you do today?
+
+Anything blocking your progress?
+#----------------------------#
+8.25
+3 daily standup questions are:
+
+What did you do yesterday?
+
+What will you do today?
+
+Anything blocking your progress?
+#----------------------------#
+8.24
+3 daily standup questions are:
+
+What did you do yesterday?
+
+What will you do today?
+
+Anything blocking your progress?
 
 #----------------------------#
 8.23

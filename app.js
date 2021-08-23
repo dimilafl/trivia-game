@@ -27,6 +27,17 @@ const questionList = {
     answers: ["11", "22", "33"],
     correctAnswer: "22",
   },
+  number3: {
+    question: " How long does a soccer game last? (in min)",
+    answers: ["45", "90", "120"],
+    correctAnswer: "90",
+  },
+  number4: {
+    question:
+      "HWhich player scored the “Hand of God” goal in a match of the 1986 World Cup?",
+    answers: ["Ronaldo", "Messi", "Maradona"],
+    correctAnswer: "Maradona",
+  },
 };
 
 //input variables
