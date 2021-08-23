@@ -29,6 +29,8 @@ const questionList = {
   },
 };
 
+//input variables
+
 const container = document.querySelector(".top-container");
 
 const newQuestion = document.createElement("h2");
@@ -59,6 +61,24 @@ const answer1Input0 = questionList.number1.answers[0];
 const answer1Input1 = questionList.number1.answers[1];
 const answer1Input2 = questionList.number1.answers[2];
 
+//more input variables
+
+const inputQuestion1 = questionList.number1.question;
+
+newQuestion.innerHTML = inputQuestion1;
+
+const correctInput = questionList.number1.correctAnswer;
+
+//not very DRY - leave a-c????
+newAnswers0.innerHTML = "a. " + answer1Input0;
+newAnswers1.innerHTML = "b. " + answer1Input1;
+newAnswers2.innerHTML = "c. " + answer1Input2;
+
+const testButton = document.querySelector(".test-button");
+let answerA = document.querySelector(".class-a");
+let answerB = document.querySelector(".class-b");
+let answerC = document.querySelector(".class-c");
+
 const questionGenerator = () => {
   container.append(newQuestion);
 
@@ -84,23 +104,7 @@ const questionGenerator = () => {
   newAnswersButton2.setAttribute("id", questionList.number1.answers[2]);
 };
 
-//input variables
-
-const inputQuestion1 = questionList.number1.question;
-
-newQuestion.innerHTML = inputQuestion1;
-
-const correctInput = questionList.number1.correctAnswer;
-
-//not very DRY - leave a-c????
-newAnswers0.innerHTML = "a. " + answer1Input0;
-newAnswers1.innerHTML = "b. " + answer1Input1;
-newAnswers2.innerHTML = "c. " + answer1Input2;
-
-const testButton = document.querySelector(".test-button");
-let answerA = document.querySelector(".class-a");
-let answerB = document.querySelector(".class-b");
-let answerC = document.querySelector(".class-c");
+//question generator
 
 testButton.addEventListener("click", () => {
   questionGenerator();
