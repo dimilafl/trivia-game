@@ -129,26 +129,51 @@ answerC.addEventListener("click", (event) => {
 
 newAnswersButton0.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
-  console.log("hi a");
-  console.log(event.currentTarget);
-  console.log("~~~~~~~~~~~~~~~``");
-  console.log(event.currentTarget.id);
+  // console.log("hi a");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
 
-  console.log(correctInput);
+  // console.log(correctInput);
+
+  if (event.currentTarget.id === correctInput) {
+    console.log("correct");
+  } else {
+    console.log("wrong");
+  }
 });
 newAnswersButton1.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
-  console.log("hi b");
-  console.log(event.currentTarget);
+  // console.log("hi b");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
 
-  console.log(correctInput);
+  // console.log(correctInput);
+
+  if (event.currentTarget.id === correctInput) {
+    console.log("correct");
+  } else {
+    console.log("wrong");
+  }
 });
 newAnswersButton2.addEventListener("click", (event) => {
   //add condition that checks match for correct answer
-  console.log("hi c");
-  console.log(event.currentTarget);
+  // console.log("hi c");
+  // console.log(event.currentTarget);
+  // console.log("~~~~~~~~~~~~~~~");
+  // console.log(event.currentTarget.id);
+  // console.log("~~~~~~~~~~~~~~~");
 
-  console.log(correctInput);
+  // console.log(correctInput);
+
+  if (event.currentTarget.id === correctInput) {
+    console.log("correct");
+  } else {
+    console.log("wrong");
+  }
 });
 
 // const sampleQuestion = inputQuestion1;
