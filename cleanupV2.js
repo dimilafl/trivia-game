@@ -95,8 +95,15 @@ newAnswersButton0.innerHTML = "click this";
 newAnswersButton1.innerHTML = "click this";
 newAnswersButton2.innerHTML = "click this";
 
-//test button
-const initialButton = document.querySelector(".test-button");
+///unneccessary code
+for (let i = 1; i < 5; i++) {
+  // console.log(i);
+  // console.log(questionList.number);
+  // console.log(questionList.number + i);
+  // questionList.length
+  // console.log(questionList[i]);
+  // console.log(questionList);
+}
 
 //iterating through the variable list
 for (let number in questionList) {
@@ -123,16 +130,6 @@ for (let number in questionList) {
   // newQuestion.innerHTML = inputQuestion1;
 
   //now lets append this
-
-  const questionGenerator = () => {
-    container.append(newQuestion);
-  };
-
-  //question generator
-
-  initialButton.addEventListener("click", () => {
-    questionGenerator();
-  });
 }
 
 //not very DRY
@@ -154,10 +151,44 @@ newAnswers0.innerHTML = "a. " + answer1Input0;
 newAnswers1.innerHTML = "b. " + answer1Input1;
 newAnswers2.innerHTML = "c. " + answer1Input2;
 
+//test button
+const initialButton = document.querySelector(".test-button");
+
 //pretty sure this code does nothing
 let answerA = document.querySelector(".class-a");
 let answerB = document.querySelector(".class-b");
 let answerC = document.querySelector(".class-c");
+
+const questionGenerator = () => {
+  container.append(newQuestion);
+
+  container.append(newAnswers0);
+  container.append(newAnswersButton0);
+  newAnswers0.setAttribute("class", "class-a");
+  newAnswersButton0.setAttribute("class", "class-a");
+
+  newAnswersButton0.setAttribute("id", questionList.number1.answers[0]);
+
+  container.append(newAnswers1);
+  container.append(newAnswersButton1);
+  newAnswers1.setAttribute("class", "class-b");
+  newAnswersButton1.setAttribute("class", "class-b");
+
+  newAnswersButton1.setAttribute("id", questionList.number1.answers[1]);
+
+  container.append(newAnswers2);
+  container.append(newAnswersButton2);
+  newAnswers2.setAttribute("class", "class-c");
+  newAnswersButton2.setAttribute("class", "class-c");
+
+  newAnswersButton2.setAttribute("id", questionList.number1.answers[2]);
+};
+
+//question generator
+
+initialButton.addEventListener("click", () => {
+  questionGenerator();
+});
 
 ////////////////////////////////////////////////
 
