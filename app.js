@@ -98,19 +98,19 @@ newAnswersButton2.innerHTML = "click this";
 //test button
 const initialButton = document.querySelector(".test-button");
 
+questionArray = [];
+
 //iterating through the variable list
 for (let number in questionList) {
-  // console.log(number);
-  // console.log(questionList[number]);
-
   //question
 
   inputForQuestion = questionList[number].question;
+  questionArray.push(inputForQuestion);
+
   console.log(inputForQuestion);
   console.log("~~~~~~~~~~~~~");
-
-  //copied from question and altered slightly
-  // let myInputQuestion1 = questionList[number].question;
+  console.log(questionArray);
+  console.log("~~~~~~~~~~~~~");
 
   //iteration version
   const myNewQuestion = document.createElement("h2");
@@ -120,12 +120,12 @@ for (let number in questionList) {
 
   console.log("~~~~~done~~~~~~~~");
 
-  // newQuestion.innerHTML = inputQuestion1;
-
-  //now lets append this
-
   const questionGenerator = () => {
-    container.append(newQuestion);
+    //appends everything
+    container.append(myNewQuestion);
+
+    //idea -
+    //create empty array, push into array, create new element???
   };
 
   //question generator
