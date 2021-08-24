@@ -70,6 +70,10 @@ const questionList = {
 
 const container = document.querySelector(".top-container");
 const newQuestion = document.createElement("h2");
+
+// //iteration version
+// const myNewQuestion = document.createElement("h2");
+
 let score = 0;
 
 //not very DRY - for loop???? - not for this section because its creating HTML elements to append to
@@ -109,10 +113,23 @@ for (let number in questionList) {
   //question
 
   inputForQuestion = questionList[number].question;
-
   console.log(inputForQuestion);
   console.log("~~~~~~~~~~~~~");
+
+  //copied from question and altered slightly
+  // let myInputQuestion1 = questionList[number].question;
+
+  //iteration version
+  const myNewQuestion = document.createElement("h2");
+
+  myNewQuestion.innerHTML = questionList[number].question;
+  console.log(myNewQuestion);
+
+  console.log("~~~~~done~~~~~~~~");
+
   // newQuestion.innerHTML = inputQuestion1;
+
+  //now lets append this
 }
 
 //not very DRY
@@ -122,7 +139,7 @@ const answer1Input2 = questionList.number1.answers[2];
 
 //more input variables
 
-//question
+//question - start here
 const inputQuestion1 = questionList.number1.question;
 newQuestion.innerHTML = inputQuestion1;
 

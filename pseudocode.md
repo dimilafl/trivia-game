@@ -53,9 +53,19 @@ Anything blocking your progress?
 
 What did you do yesterday?
 
+added score functionality - currently add/sub 1 point per right wrong answer
+
+- added basic iteration
+
 What will you do today?
 
+- add more complex iteration
+
 Anything blocking your progress?
+
+-need to add function so score wont keep adding indefitely (my solution) - change questions to fix this?
+
+-html CSS
 
 #----------------------------#
 8.23
@@ -97,3 +107,13 @@ Daily Standup Common Pitfalls & What Not to Do
 #6: Not Listening to Teammates
 #7: Skipping Standups
 #8: Not Raising Blockers
+
+<!-- ideas -->
+
+check for unintended behavior?
+
+<!-- save for end -->
+
+add a timer?
+implement sound?
+animation?
