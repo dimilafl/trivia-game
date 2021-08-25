@@ -50,11 +50,16 @@ and worked and the logic of the game
 What will you do today?
 
 work on finalizing the logic for the game
-work some more on CSS
+work some more on HTML CSS
+github pages
 
 <!-- for me!!!! -->
 <!-- scoring function of the game -->
 <!-- reset function & winning conditons also check over the rubric -->
+<!-- attack challenge areas -->
+<!-- fun stuff -->
+<!-- keyboard presses -->
+<!-- local storage -->
 
 Anything blocking your progress?
 HTML and CSS isnt my specialty
