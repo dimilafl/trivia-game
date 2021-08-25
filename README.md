@@ -12,7 +12,6 @@ Need an official version as well
 ///////////////////////////////
 
 Need to add questions and answers.
--input box or multiple choice selector for answers to questions - with feedback and score changes depending on whether the answer was right or wrong
 -after a certain amount of questions are wrong the game would be over for the player
 a good UI, for players to have good experiences
 -ability to restart midgame

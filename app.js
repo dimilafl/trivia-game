@@ -98,7 +98,11 @@ newAnswersButton2.innerHTML = "click this";
 //test button
 const initialButton = document.querySelector(".test-button");
 
+//for iterating through the variable list
 questionArray = [];
+
+//to start and stop questions
+action = null;
 
 //iterating through the variable list
 for (let number in questionList) {
@@ -107,25 +111,52 @@ for (let number in questionList) {
   inputForQuestion = questionList[number].question;
   questionArray.push(inputForQuestion);
 
-  console.log(inputForQuestion);
-  console.log("~~~~~~~~~~~~~");
-  console.log(questionArray);
-  console.log("~~~~~~~~~~~~~");
+  //// console.log(inputForQuestion);
+  //// console.log("~~~~~~~~~~~~~");
+
+  // console.log(questionArray);
+  // console.log("~~~~~~~~~~~~~");
 
   //iteration version
   const myNewQuestion = document.createElement("h2");
 
   myNewQuestion.innerHTML = questionList[number].question;
-  console.log(myNewQuestion);
-
-  console.log("~~~~~done~~~~~~~~");
+  // console.log(myNewQuestion);
+  // console.log("~~~~~done~~~~~~~~");
 
   const questionGenerator = () => {
     //appends everything
-    container.append(myNewQuestion);
+    // container.append(myNewQuestion);
 
-    //idea -
-    //create empty array, push into array, create new element???
+    //iterates 8 times for each number - need to iterate once - can do thing where its like if number == number1
+
+    while (action !== "stop") {
+      for (let i = 0; i < questionArray.length; i++) {
+        console.log(i);
+
+        // console.log(number);
+
+        // console.log(questionArray[i]);
+
+        // console.log("~~~~~done~~~~~~~~");
+
+        container.append(questionArray[i]);
+
+        return (action = "stop");
+      }
+
+      //appends questionArray
+      // container.append(questionArray);
+
+      //idea -
+      //create empty array, push into array, create new element???
+
+      // maybe reference another function?
+      // that gets called in a for loop
+
+      //while action = null
+      //while action !== stop
+    }
   };
 
   //question generator
