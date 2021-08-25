@@ -44,9 +44,22 @@ Anything blocking your progress?
 
 What did you do yesterday?
 
+added html and css for the game,
+and worked and the logic of the game
+
 What will you do today?
 
+work on finalizing the logic for the game
+work some more on CSS
+
+<!-- for me!!!! -->
+<!-- scoring function of the game -->
+<!-- reset function & winning conditons also check over the rubric -->
+
 Anything blocking your progress?
+HTML and CSS isnt my specialty
+Getting a good UI together
+extra code in the way is slowing me down - clean this up!!!
 #----------------------------#
 8.24
 3 daily standup questions are:

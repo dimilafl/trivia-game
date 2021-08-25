@@ -40,7 +40,7 @@ const questionList = {
   number6: {
     question:
       "What is the limit of stoppage time that can be added at the end of a game",
-    answers: ["10 min", "5 min", "None"],
+    answers: ["10min", "5min", "None"],
     correctAnswer: "None",
   },
   number7: {
@@ -104,6 +104,34 @@ questionArray = [];
 //to start and stop questions
 action = null;
 
+///////////////////////////////////////////////
+
+//not very DRY
+const answer1Input0 = questionList.number1.answers[0];
+const answer1Input1 = questionList.number1.answers[1];
+const answer1Input2 = questionList.number1.answers[2];
+
+//more input variables
+
+//question - start here
+const inputQuestion1 = questionList.number1.question;
+newQuestion.innerHTML = inputQuestion1;
+
+//correct answer
+const correctInput = questionList.number1.correctAnswer;
+
+//not very DRY - leave a-c????
+newAnswers0.innerHTML = "a. " + answer1Input0;
+newAnswers1.innerHTML = "b. " + answer1Input1;
+newAnswers2.innerHTML = "c. " + answer1Input2;
+
+//pretty sure this code does nothing
+let answerA = document.querySelector(".class-a");
+let answerB = document.querySelector(".class-b");
+let answerC = document.querySelector(".class-c");
+
+///////////////////////////////////////////////
+
 //iterating through the variable list
 for (let number in questionList) {
   //question
@@ -134,13 +162,36 @@ for (let number in questionList) {
       for (let i = 0; i < questionArray.length; i++) {
         console.log(i);
 
-        // console.log(number);
+        console.log(number);
 
         // console.log(questionArray[i]);
 
         // console.log("~~~~~done~~~~~~~~");
 
         container.append(questionArray[i]);
+
+        //all good
+        container.append(newAnswers0);
+        container.append(newAnswersButton0);
+
+        newAnswers0.setAttribute("class", "class-a");
+        newAnswersButton0.setAttribute("class", "class-a");
+
+        newAnswersButton0.setAttribute("id", questionList[number].answers[0]);
+
+        container.append(newAnswers1);
+        container.append(newAnswersButton1);
+        newAnswers1.setAttribute("class", "class-b");
+        newAnswersButton1.setAttribute("class", "class-b");
+
+        newAnswersButton1.setAttribute("id", questionList[number].answers[1]);
+
+        container.append(newAnswers2);
+        container.append(newAnswersButton2);
+        newAnswers2.setAttribute("class", "class-c");
+        newAnswersButton2.setAttribute("class", "class-c");
+
+        newAnswersButton2.setAttribute("id", questionList[number].answers[2]);
 
         return (action = "stop");
       }
@@ -166,31 +217,7 @@ for (let number in questionList) {
   });
 }
 
-//not very DRY
-const answer1Input0 = questionList.number1.answers[0];
-const answer1Input1 = questionList.number1.answers[1];
-const answer1Input2 = questionList.number1.answers[2];
-
-//more input variables
-
-//question - start here
-const inputQuestion1 = questionList.number1.question;
-newQuestion.innerHTML = inputQuestion1;
-
-//correct answer
-const correctInput = questionList.number1.correctAnswer;
-
-//not very DRY - leave a-c????
-newAnswers0.innerHTML = "a. " + answer1Input0;
-newAnswers1.innerHTML = "b. " + answer1Input1;
-newAnswers2.innerHTML = "c. " + answer1Input2;
-
-//pretty sure this code does nothing
-let answerA = document.querySelector(".class-a");
-let answerB = document.querySelector(".class-b");
-let answerC = document.querySelector(".class-c");
-
-////////////////////////////////////////////////
+///////////////////////////////////////////////
 
 //answers - click function
 
