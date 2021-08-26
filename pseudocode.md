@@ -35,9 +35,18 @@ worry about HTML and CSS styling at end it just wastes time and is inefficient d
 
 What did you do yesterday?
 
+worked on finishing up the logic for the game
+
 What will you do today?
 
+-add some finishing touches
+-add html and CSS (more styling) and extra stuff like animations and sounds if i can
+-try to catch any bugs in the game
+
+- add a randomizer finction
+
 Anything blocking your progress?
+working on more challenging aspects like animations
 #----------------------------#
 8.25
 3 daily standup questions are:
@@ -54,6 +63,7 @@ work some more on HTML CSS
 github pages
 
 <!-- for me!!!! -->
+<!-- shuffle questions -->
 <!-- scoring function of the game -->
 <!-- reset function & winning conditons also check over the rubric -->
 <!-- attack challenge areas -->

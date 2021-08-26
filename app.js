@@ -77,49 +77,52 @@ const container = document.querySelector(".top-container");
 //input variables
 //input variables
 
-//delete
-const newQuestion = document.createElement("h2");
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
 
-// //iteration version
-// const myNewQuestion = document.createElement("h2");
+//more input variables
+const questionContainer = document.querySelector(".my-question");
 
-//not very DRY - for loop???? - not for this section because its creating HTML elements to append to
+const answerContainer = document.querySelector(".answer-container");
 
-// delete
-const newAnswers0 = document.createElement("h3");
-const newAnswersButton0 = document.createElement("button");
-const newAnswers1 = document.createElement("h3");
-const newAnswersButton1 = document.createElement("button");
-const newAnswers2 = document.createElement("h3");
-const newAnswersButton2 = document.createElement("button");
+const answerAcontainer = document.querySelector(".answer-a");
+const answerBcontainer = document.querySelector(".answer-b");
+const answerCcontainer = document.querySelector(".answer-c");
 
-const nextButton = document.querySelector(".next-button");
+const buttonAcontainer = document.querySelector(".button-a");
 
-const addButton = document.querySelector(".add-button");
+const buttonBcontainer = document.querySelector(".button-b");
 
+const buttonCcontainer = document.querySelector(".button-c");
+
+// need to make this html
+//newQuestion
+
+///////////////////////////////////////////////
 //scores
 const scoreContainer = document.querySelector(".score-container");
+
+//hard code in html
 const scoreElement = document.createElement("h4");
 scoreElement.innerText = score;
 scoreContainer.append(scoreElement);
 
-//button text
-newAnswersButton0.innerHTML = "click this";
-newAnswersButton1.innerHTML = "click this";
-newAnswersButton2.innerHTML = "click this";
-
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-
 //start button
 const initialButton = document.querySelector(".start-button");
+//start button
+const nextButton = document.querySelector(".next-button");
+
+//add ? button
+const addButton = document.querySelector(".add-button");
 
 //for iterating through the variable list
 let questionArray = [];
 
 //to start and stop questions
 let action = null;
+
+let index, correctInput;
 
 ///////////////////////////////////////////////
 
@@ -133,273 +136,152 @@ for (let number in questionList) {
   inputForQuestion = questionList[number].question;
   questionArray.push(inputForQuestion);
 }
-////////
+///////////////////////////////////////////////
 
-const questionFunction = (currentQuestion) => {
-  while (action != "stop") {
-    for (let number in questionList) {
-      //maybe move this part over to another function?
-      currentQuestion = questionList[number].question;
+// const questionFunction = () => {
+//   console.log(questionArray);
+// };
+// questionFunction();
 
-      console.log(currentQuestion);
+///////////////////////////////////////////////
 
-      newQuestion.innerHTML = currentQuestion;
-      // newQuestion.innerHTML = questionList[number].question;
-
-      console.log("~~~~~~~~~~~~~");
-
-      // //shouldn't append until on click
-      // container.append(newQuestion);
-
-      action = "stop";
-
-      //can do .question and so on for other variables i think
-      // for (let newVar in questionList[number].question) {
-    }
-  }
-};
-
-questionFunction();
-
-// for (let i = 0; i < questionArray.length; i++)
-
-////////
-
-// for going to next question - add new button?
-// that clears the innerHTML and adds new question
-
-// const displayFunction = () => {
-// console.log("hi");
-
-for (let i = 0; i < questionArray.length; i++) {
-  // action = null;
-
-  let currentQuestion = questionArray[i];
+function clearScreen() {
+  questionContainer.innerHTML = "";
 }
 
-//   // console.log(i);
-//   // console.log("~~~~~~~~~~~~~");
-// }
-// };
+function gameInitializer() {
+  console.log("game started");
 
-// turn on
-// displayFunction();
+  index = 0;
 
-////////
-const clearScreen = () => {
-  newQuestion.innerHTML = "";
+  questionIterator();
 
-  action = null;
+  // index++;
 
-  // questionFunction();
-  // questionFunction(currentQuestion);
-  console.log("~~~~~~done~~~~~~~");
-  // action = stop;
-};
-////////
-const addNewScreenQuestion = () => {
-  newQuestion.innerHTML = "";
-  // action = null;
-  // questionFunction();
-  // questionFunction(currentQuestion);
   // console.log("~~~~~~done~~~~~~~");
-  // action = stop;
-};
-//next button
+}
+
+function questionIterator() {
+  clearScreen();
+
+  // console.log(questionList);
+  // console.log(index);
+  // console.log("~~~~~~~~~~~~~");
+
+  questionDisplay(questionList[index]);
+}
+
+function questionDisplay(questionInput) {
+  questionContainer.innerHTML = questionInput.question;
+
+  answerAcontainer.innerHTML = questionInput.answers[0];
+  answerBcontainer.innerHTML = questionInput.answers[1];
+  answerCcontainer.innerHTML = questionInput.answers[2];
+
+  buttonAcontainer.innerHTML = questionInput.answers[0];
+
+  buttonBcontainer.innerHTML = questionInput.answers[1];
+
+  buttonCcontainer.innerHTML = questionInput.answers[2];
+
+  correctInput = questionInput.correctAnswer;
+
+  return correctInput;
+}
+
+function clearScreen() {
+  questionContainer.innerHTML = "";
+
+  answerAcontainer.innerHTML = "";
+  answerBcontainer.innerHTML = "";
+  answerCcontainer.innerHTML = "";
+
+  buttonAcontainer.innerHTML = "Button";
+
+  buttonBcontainer.innerHTML = "Button";
+
+  buttonCcontainer.innerHTML = "Button";
+
+  buttonAcontainer.style.color = "white";
+
+  buttonBcontainer.style.color = "white";
+
+  buttonCcontainer.style.color = "white";
+
+  // console.log("~~~~~~done~~~~~~~");
+}
+
+// gameInitializer();
+
+initialButton.addEventListener("click", gameInitializer);
 
 nextButton.addEventListener("click", clearScreen);
 
-//add button
-addButton.addEventListener("click", addNewScreenQuestion);
-////////
+addButton.addEventListener("click", () => {
+  index++;
 
-const appendFunction = () => {
-  //shouldn't append until on click
-  container.append(newQuestion);
-  // action = null;
-};
+  questionIterator();
+});
 
-initialButton.addEventListener("click", appendFunction);
+///////////////////////////////////////////////
 
-////////
+function answerChecker(event) {
+  if (event.currentTarget.innerText === correctInput) {
+    console.log("correct");
+
+    // console.log(index);
+    // console.log("~~~~~~~~~~~");
+    // console.log(correctInput);
+
+    event.currentTarget.style.color = "green";
+
+    score++;
+
+    scoreElement.innerText = score;
+
+    alert("now press clear question, and press add question after!");
+  } else {
+    console.log("wrong");
+
+    // console.log(event.currentTarget.innerText);
+    // console.log(index);
+    // console.log("~~~~~~~~~~~");
+    // console.log(correctInput);
+
+    event.currentTarget.style.color = "red";
+
+    score--;
+
+    scoreElement.innerText = score;
+
+    alert("now press clear question, and press add question after!");
+  }
+}
+
+// change button text to names
+
+///////////////////////////////////////////////
 
 //answers - click function
 
-newAnswersButton0.addEventListener("click", (event) => {
-  if (event.currentTarget.id === correctInput) {
-    action = null;
-    console.log("correct");
+buttonAcontainer.addEventListener("click", answerChecker);
 
-    event.currentTarget.style.color = "green";
+buttonBcontainer.addEventListener("click", answerChecker);
 
-    score++;
+buttonCcontainer.addEventListener("click", answerChecker);
 
-    scoreElement.innerText = score;
-  } else {
-    action = null;
-    console.log("wrong");
+// console.log(correctInput);
 
-    event.currentTarget.style.color = "red";
+//now add winning conditions
 
-    score--;
+//check rubric
 
-    scoreElement.innerText = score;
-  }
-});
+//look in pseudocode for more ideas
 
-newAnswersButton1.addEventListener("click", (event) => {
-  if (event.currentTarget.id === correctInput) {
-    action = null;
-    console.log("correct");
+//add questions
 
-    event.currentTarget.style.color = "green";
+//git PAGES!!!!!!!!!!
+//git PAGES!!!!!!!!!!
+//git PAGES!!!!!!!!!!
 
-    score++;
-
-    scoreElement.innerText = score;
-  } else {
-    action = null;
-    console.log("wrong");
-
-    event.currentTarget.style.color = "red";
-
-    score--;
-
-    scoreElement.innerText = score;
-  }
-});
-
-newAnswersButton2.addEventListener("click", (event) => {
-  if (event.currentTarget.id === correctInput) {
-    action = null;
-    console.log("correct");
-
-    event.currentTarget.style.color = "green";
-
-    score++;
-
-    scoreElement.innerText = score;
-  } else {
-    action = null;
-    console.log("wrong");
-
-    event.currentTarget.style.color = "red";
-
-    score--;
-
-    scoreElement.innerText = score;
-  }
-});
-
-///????? whats this?
-// const answers = {};
-
-// ///////////////////////////////////////////////
-
-// //iterating through the variable list
-// for (let number in questionList) {
-//   //question
-
-//   inputForQuestion = questionList[number].question;
-//   questionArray.push(inputForQuestion);
-
-//   //// console.log(inputForQuestion);
-//   //// console.log("~~~~~~~~~~~~~");
-
-//   // console.log(questionArray);
-//   // console.log("~~~~~~~~~~~~~");
-
-//   //iteration version
-//   const myNewQuestion = document.createElement("h2");
-
-//   // good idea but does nothing
-//   // myNewQuestion.innerHTML = questionList[number].question;
-//   // console.log(myNewQuestion);
-//   // console.log("~~~~~done~~~~~~~~");
-
-//   const questionGenerator = (questionNum) => {
-//     //appends everything
-//     // container.append(myNewQuestion);
-
-//     //iterates 8 times for each number - need to iterate once - can do thing where its like if number == number1
-
-//     while (action !== "stop") {
-//       // for (let i = 0; i < questionArray.length; i++) {
-
-//       //move to for loop?
-//       // newQuestion.innerHTML = questionArray[i];
-
-//       // console.log(i);
-//       console.log(number);
-//       console.log("~~~~~~~~~~~~~");
-//       console.log(this.questionNum);
-//       console.log(this.number);
-//       console.log(questionNum);
-//       console.log("~~~~~done~~~~~~~~");
-
-//       container.append(newQuestion);
-
-//       // container.append(questionArray[i]);
-
-//       //all good
-//       container.append(newAnswers0);
-//       container.append(newAnswersButton0);
-
-//       newAnswers0.setAttribute("class", "class-a");
-//       newAnswersButton0.setAttribute("class", "class-a");
-
-//       newAnswersButton0.setAttribute("id", questionList[number].answers[0]);
-
-//       container.append(newAnswers1);
-//       container.append(newAnswersButton1);
-//       newAnswers1.setAttribute("class", "class-b");
-//       newAnswersButton1.setAttribute("class", "class-b");
-
-//       newAnswersButton1.setAttribute("id", questionList[number].answers[1]);
-
-//       container.append(newAnswers2);
-//       container.append(newAnswersButton2);
-//       newAnswers2.setAttribute("class", "class-c");
-//       newAnswersButton2.setAttribute("class", "class-c");
-
-//       newAnswersButton2.setAttribute("id", questionList[number].answers[2]);
-
-//       action = "stop";
-//       // action = "stop";
-//       // return (action = "stop");
-
-//       // just make arrays for everything like the questions
-//       // }
-
-//       //appends questionArray
-//       // container.append(questionArray);
-
-//       //idea -
-//       //create empty array, push into array, create new element???
-
-//       // maybe reference another function?
-//       // that gets called in a for loop
-
-//       //while action = null
-//       //while action !== stop
-//     }
-//   };
-
-//   //question generator
-
-//   initialButton.addEventListener("click", () => {
-//     questionGenerator();
-//     // action = null;
-//   });
-
-//   for (let i = 0; i < questionArray.length; i++) {
-//     action = null;
-
-//     questionGenerator();
-
-//     // let currentEnemy = enemyArray[i];
-//     // promptFunction(currentEnemy);
-//   }
-// }
-
-// ///////////////////////////////////////////////
+//check for bugs
