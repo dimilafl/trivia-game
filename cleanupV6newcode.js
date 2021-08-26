@@ -9,52 +9,52 @@
 // -ability to restart midgame
 // -new question adder (or option to pass on a current question being asked)
 
-const questionList = [
-  {
+const questionList = {
+  number1: {
     question: "Who is considered the greatest soccer player?",
     answers: ["Beckham", "Pele", "Maradona"],
     correctAnswer: "Pele",
   },
-  {
+  number2: {
     question:
       "How many players in total will be on the field in a typical soccer match?",
     answers: ["11", "22", "33"],
     correctAnswer: "22",
   },
-  {
+  number3: {
     question: "How long does a soccer game last? (in min)",
     answers: ["45", "90", "120"],
     correctAnswer: "90",
   },
-  {
+  number4: {
     question:
       "Which player scored the “Hand of God” goal in a match of the 1986 World Cup?",
     answers: ["Ronaldo", "Messi", "Maradona"],
     correctAnswer: "Maradona",
   },
-  {
+  number5: {
     question: "Who can add time in a soccer game?",
     answers: ["Referee", "Coach", "Captain"],
     correctAnswer: "Referee",
   },
-  {
+  number6: {
     question:
       "What is the limit of stoppage time that can be added at the end of a game",
     answers: ["10min", "5min", "None"],
     correctAnswer: "None",
   },
-  {
+  number7: {
     question:
       "The minimum number of players that a soccer team needs to be eligible to play is …",
     answers: ["7", "9", "11"],
     correctAnswer: "7",
   },
-  {
+  number8: {
     question: "Which soccer player is nicknamed Zizou?",
     answers: ["Gerrard", "Zidane", "Messi"],
     correctAnswer: "Zidane",
   },
-  {
+  number9: {
     question: "Which country won the most FIFA World Cup titles?",
     answers: ["Germany", "England", "Brazil"],
     correctAnswer: "Brazil",
@@ -64,28 +64,19 @@ const questionList = [
   //   answers: ["45", "90", "120"],
   //   correctAnswer: "90",
   // },
-];
+};
 
 //input variables
-let score = 0;
 
 const container = document.querySelector(".top-container");
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-
-//input variables
-//input variables
-
-//delete
 const newQuestion = document.createElement("h2");
 
 // //iteration version
 // const myNewQuestion = document.createElement("h2");
 
-//not very DRY - for loop???? - not for this section because its creating HTML elements to append to
+let score = 0;
 
-// delete
+//not very DRY - for loop???? - not for this section because its creating HTML elements to append to
 const newAnswers0 = document.createElement("h3");
 const newAnswersButton0 = document.createElement("button");
 const newAnswers1 = document.createElement("h3");
@@ -94,8 +85,6 @@ const newAnswers2 = document.createElement("h3");
 const newAnswersButton2 = document.createElement("button");
 
 const nextButton = document.querySelector(".next-button");
-
-const addButton = document.querySelector(".add-button");
 
 //scores
 const scoreContainer = document.querySelector(".score-container");
@@ -108,12 +97,8 @@ newAnswersButton0.innerHTML = "click this";
 newAnswersButton1.innerHTML = "click this";
 newAnswersButton2.innerHTML = "click this";
 
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-///////////////////////////////////////////////
-
-//start button
-const initialButton = document.querySelector(".start-button");
+//test button
+const initialButton = document.querySelector(".test-button");
 
 //for iterating through the variable list
 let questionArray = [];
@@ -123,10 +108,31 @@ let action = null;
 
 ///////////////////////////////////////////////
 
+//not very DRY
+const answer1Input0 = questionList.number1.answers[0];
+const answer1Input1 = questionList.number1.answers[1];
+const answer1Input2 = questionList.number1.answers[2];
+
 //more input variables
 
-///////////////////////////////////////////////
+//question - start here
+const inputQuestion1 = questionList.number1.question;
+// newQuestion.innerHTML = inputQuestion1;
 
+//correct answer
+const correctInput = questionList.number1.correctAnswer;
+
+//not very DRY - leave a-c????
+newAnswers0.innerHTML = "a. " + answer1Input0;
+newAnswers1.innerHTML = "b. " + answer1Input1;
+newAnswers2.innerHTML = "c. " + answer1Input2;
+
+//pretty sure this code does nothing
+let answerA = document.querySelector(".class-a");
+let answerB = document.querySelector(".class-b");
+let answerC = document.querySelector(".class-c");
+
+////////
 for (let number in questionList) {
   //question
 
@@ -138,23 +144,50 @@ for (let number in questionList) {
 const questionFunction = (currentQuestion) => {
   while (action != "stop") {
     for (let number in questionList) {
-      //maybe move this part over to another function?
-      currentQuestion = questionList[number].question;
+      //question
 
       console.log(currentQuestion);
+      console.log("~~~~~~~~~~~~~");
+      console.log(number);
 
-      newQuestion.innerHTML = currentQuestion;
-      // newQuestion.innerHTML = questionList[number].question;
+      console.log(questionList[number]);
 
+      console.log(questionList[number].question);
+
+      console.log("~~~~~~~~~~~~~");
+      console.log(questionArray);
+
+      console.log("~~~~~~~~~~~~~");
+      //maybe move this part over to another function?
+      newQuestion.innerHTML = questionList[number].question;
+      console.log(newQuestion);
       console.log("~~~~~~~~~~~~~");
 
       // //shouldn't append until on click
       // container.append(newQuestion);
 
-      action = "stop";
+      return (action = "stop");
 
       //can do .question and so on for other variables i think
       // for (let newVar in questionList[number].question) {
+
+      for (let newVar in questionList[number]) {
+        //question
+
+        // return (action = "stop");
+
+        // console.log(question);
+        //
+        // console.log(newVar);
+        //
+        // console.log("~~~~~~~~~~~~~");
+        // console.log(theQuestion);
+
+        // console.log(questionList[number]);
+        console.log("~~~~~~done~~~~~~~");
+
+        // console.log(theQuestion);
+      }
     }
   }
 };
@@ -168,19 +201,26 @@ questionFunction();
 // for going to next question - add new button?
 // that clears the innerHTML and adds new question
 
-// const displayFunction = () => {
-// console.log("hi");
+const displayFunction = () => {
+  // console.log("hi");
 
-for (let i = 0; i < questionArray.length; i++) {
-  // action = null;
+  action = null;
 
-  let currentQuestion = questionArray[i];
-}
+  questionFunction();
 
-//   // console.log(i);
-//   // console.log("~~~~~~~~~~~~~");
-// }
-// };
+  for (let i = 0; i < 2; i++) {
+    // console.log(i);
+    // console.log("~~~~~~~~~~~~~");
+    // console.log(questionList);
+    // console.log("~~~~~~~~~~~~~");
+    // console.log(Object.keys(questionList));
+    // console.log("~~~~~~~~~~~~~");
+    // console.log(questionArray);
+    // // console.log(questionList[i]);
+    // console.log("~~~~~~~done~~~~~~");
+    // // console.log(questionList[0]);
+  }
+};
 
 // turn on
 // displayFunction();
@@ -192,25 +232,7 @@ const clearScreen = () => {
   action = null;
 
   // questionFunction();
-  // questionFunction(currentQuestion);
-  console.log("~~~~~~done~~~~~~~");
-  // action = stop;
 };
-////////
-const addNewScreenQuestion = () => {
-  newQuestion.innerHTML = "";
-  // action = null;
-  // questionFunction();
-  // questionFunction(currentQuestion);
-  // console.log("~~~~~~done~~~~~~~");
-  // action = stop;
-};
-//next button
-
-nextButton.addEventListener("click", clearScreen);
-
-//add button
-addButton.addEventListener("click", addNewScreenQuestion);
 ////////
 
 const appendFunction = () => {
@@ -222,6 +244,10 @@ const appendFunction = () => {
 initialButton.addEventListener("click", appendFunction);
 
 ////////
+
+//next button
+
+nextButton.addEventListener("click", clearScreen);
 
 //answers - click function
 

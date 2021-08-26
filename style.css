@@ -13,9 +13,29 @@
   /* padding: 100px; */
   /* padding: 100px 100px 0px 100px; */
 }
-.test-button {
+.start-button {
   color: green;
   background-color: red;
 
   /* do similar for other buttons */
+}
+.next-button {
+  color: white;
+  background-color: orange;
+
+  /* do similar for other buttons */
+}
+
+.add-button {
+  color: green;
+  background-color: red;
+
+  /* do similar for other buttons */
+}
+
+#button-a,
+#button-b,
+#button-c {
+  color: white;
+  background-color: teal;
 }

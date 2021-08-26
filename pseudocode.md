@@ -67,6 +67,13 @@ Anything blocking your progress?
 HTML and CSS isnt my specialty
 Getting a good UI together
 extra code in the way is slowing me down - clean this up!!!
+
+shouldn't append until on click
+
+<!-- container.append(newQuestion); -->
+
+for going to next question - add new button?
+that clears the innerHTML and adds new question
 #----------------------------#
 8.24
 3 daily standup questions are:
@@ -111,11 +118,11 @@ Anything blocking your progress?
 
 What did you do yesterday?
 
-What will you do today?
+t will you do today?
 
-Anything blocking your progress?
+<!-- Anything blocking your progress? -->
 
-https://geekbot.com/blog/daily-standup-meeting/?k_id=dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE
+ps://geekbot.com/blog/daily-standup-meeting/?dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE
 
 Daily Standup Common Pitfalls & What Not to Do
 
