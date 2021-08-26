@@ -60,6 +60,8 @@ github pages
 <!-- fun stuff -->
 <!-- keyboard presses -->
 <!-- local storage -->
+<!-- add sound??? -->
+<!-- add animations??? -->
 
 Anything blocking your progress?
 HTML and CSS isnt my specialty
@@ -135,3 +137,15 @@ check for unintended behavior?
 add a timer?
 implement sound?
 animation?
+
+<!-- ideas  -->
+
+make a seperate iteration setting the action the null and clearing the HTML out that you do not want
+
+prob have to redo event listeners as well
+
+the way youre iterating isnt working
+
+maybe put the for loop in the initial button and loop off of the question list that would make the most sense to me
+
+maybe create a next button to iterate???

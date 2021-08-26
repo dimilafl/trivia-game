@@ -99,7 +99,7 @@ newAnswersButton2.innerHTML = "click this";
 const initialButton = document.querySelector(".test-button");
 
 //for iterating through the variable list
-let questionArray = [];
+questionArray = [];
 
 //to start and stop questions
 let action = null;
@@ -130,79 +130,115 @@ let answerA = document.querySelector(".class-a");
 let answerB = document.querySelector(".class-b");
 let answerC = document.querySelector(".class-c");
 
-////////
+///////////////////////////////////////////////
+
+//iterating through the variable list
 for (let number in questionList) {
   //question
 
   inputForQuestion = questionList[number].question;
   questionArray.push(inputForQuestion);
-}
-////////
 
-for (let number in questionList) {
-  //question
+  //// console.log(inputForQuestion);
+  //// console.log("~~~~~~~~~~~~~");
 
-  console.log(number);
+  // console.log(questionArray);
+  // console.log("~~~~~~~~~~~~~");
 
-  console.log(questionList[number]);
+  //iteration version
+  const myNewQuestion = document.createElement("h2");
 
-  console.log(questionList[number].question);
+  // good idea but does nothing
+  // myNewQuestion.innerHTML = questionList[number].question;
+  // console.log(myNewQuestion);
+  // console.log("~~~~~done~~~~~~~~");
 
-  console.log("~~~~~~~~~~~~~");
-  console.log(questionArray);
+  const questionGenerator = (questionNum) => {
+    //appends everything
+    // container.append(myNewQuestion);
 
-  console.log("~~~~~~~~~~~~~");
-  //maybe move this part over to another function?
-  newQuestion.innerHTML = questionList[number].question;
-  console.log(newQuestion);
-  console.log("~~~~~~~~~~~~~");
-  container.append(newQuestion);
+    //iterates 8 times for each number - need to iterate once - can do thing where its like if number == number1
 
-  //can do .question and so on for other variables i think
-  // for (let newVar in questionList[number].question) {
+    while (action !== "stop") {
+      // for (let i = 0; i < questionArray.length; i++) {
 
-  for (let newVar in questionList[number]) {
-    //question
+      //move to for loop?
+      // newQuestion.innerHTML = questionArray[i];
 
-    // console.log(question);
-    //
-    // console.log(newVar);
-    //
-    // console.log("~~~~~~~~~~~~~");
-    // console.log(theQuestion);
+      // console.log(i);
+      console.log(number);
+      console.log("~~~~~~~~~~~~~");
+      console.log(this.questionNum);
+      console.log(this.number);
+      console.log(questionNum);
+      console.log("~~~~~done~~~~~~~~");
 
-    // console.log(questionList[number]);
-    console.log("~~~~~~done~~~~~~~");
+      container.append(newQuestion);
 
-    // console.log(theQuestion);
+      // container.append(questionArray[i]);
+
+      //all good
+      container.append(newAnswers0);
+      container.append(newAnswersButton0);
+
+      newAnswers0.setAttribute("class", "class-a");
+      newAnswersButton0.setAttribute("class", "class-a");
+
+      newAnswersButton0.setAttribute("id", questionList[number].answers[0]);
+
+      container.append(newAnswers1);
+      container.append(newAnswersButton1);
+      newAnswers1.setAttribute("class", "class-b");
+      newAnswersButton1.setAttribute("class", "class-b");
+
+      newAnswersButton1.setAttribute("id", questionList[number].answers[1]);
+
+      container.append(newAnswers2);
+      container.append(newAnswersButton2);
+      newAnswers2.setAttribute("class", "class-c");
+      newAnswersButton2.setAttribute("class", "class-c");
+
+      newAnswersButton2.setAttribute("id", questionList[number].answers[2]);
+
+      action = "stop";
+      // action = "stop";
+      // return (action = "stop");
+
+      // just make arrays for everything like the questions
+      // }
+
+      //appends questionArray
+      // container.append(questionArray);
+
+      //idea -
+      //create empty array, push into array, create new element???
+
+      // maybe reference another function?
+      // that gets called in a for loop
+
+      //while action = null
+      //while action !== stop
+    }
+  };
+
+  //question generator
+
+  initialButton.addEventListener("click", () => {
+    questionGenerator();
+    // action = null;
+  });
+
+  for (let i = 0; i < questionArray.length; i++) {
+    action = null;
+
+    questionGenerator();
+
+    // let currentEnemy = enemyArray[i];
+    // promptFunction(currentEnemy);
   }
 }
 
-// for (let i = 0; i < questionArray.length; i++)
-
-////////
-
-const displayFunction = () => {
-  // console.log("hi");
-
-  for (let i = 0; i < 2; i++) {
-    console.log(i);
-    console.log("~~~~~~~~~~~~~");
-    console.log(questionList);
-    console.log("~~~~~~~~~~~~~");
-    console.log(Object.keys(questionList));
-    console.log("~~~~~~~~~~~~~");
-    console.log(questionArray);
-    // console.log(questionList[i]);
-    console.log("~~~~~~~done~~~~~~");
-    // console.log(questionList[0]);
-  }
-};
-
-// turn on
-// displayFunction();
-
-////////
+///////////////////////////////////////////////
 
 //answers - click function
 
@@ -274,113 +310,3 @@ newAnswersButton2.addEventListener("click", (event) => {
 
 ///????? whats this?
 // const answers = {};
-
-// ///////////////////////////////////////////////
-
-// //iterating through the variable list
-// for (let number in questionList) {
-//   //question
-
-//   inputForQuestion = questionList[number].question;
-//   questionArray.push(inputForQuestion);
-
-//   //// console.log(inputForQuestion);
-//   //// console.log("~~~~~~~~~~~~~");
-
-//   // console.log(questionArray);
-//   // console.log("~~~~~~~~~~~~~");
-
-//   //iteration version
-//   const myNewQuestion = document.createElement("h2");
-
-//   // good idea but does nothing
-//   // myNewQuestion.innerHTML = questionList[number].question;
-//   // console.log(myNewQuestion);
-//   // console.log("~~~~~done~~~~~~~~");
-
-//   const questionGenerator = (questionNum) => {
-//     //appends everything
-//     // container.append(myNewQuestion);
-
-//     //iterates 8 times for each number - need to iterate once - can do thing where its like if number == number1
-
-//     while (action !== "stop") {
-//       // for (let i = 0; i < questionArray.length; i++) {
-
-//       //move to for loop?
-//       // newQuestion.innerHTML = questionArray[i];
-
-//       // console.log(i);
-//       console.log(number);
-//       console.log("~~~~~~~~~~~~~");
-//       console.log(this.questionNum);
-//       console.log(this.number);
-//       console.log(questionNum);
-//       console.log("~~~~~done~~~~~~~~");
-
-//       container.append(newQuestion);
-
-//       // container.append(questionArray[i]);
-
-//       //all good
-//       container.append(newAnswers0);
-//       container.append(newAnswersButton0);
-
-//       newAnswers0.setAttribute("class", "class-a");
-//       newAnswersButton0.setAttribute("class", "class-a");
-
-//       newAnswersButton0.setAttribute("id", questionList[number].answers[0]);
-
-//       container.append(newAnswers1);
-//       container.append(newAnswersButton1);
-//       newAnswers1.setAttribute("class", "class-b");
-//       newAnswersButton1.setAttribute("class", "class-b");
-
-//       newAnswersButton1.setAttribute("id", questionList[number].answers[1]);
-
-//       container.append(newAnswers2);
-//       container.append(newAnswersButton2);
-//       newAnswers2.setAttribute("class", "class-c");
-//       newAnswersButton2.setAttribute("class", "class-c");
-
-//       newAnswersButton2.setAttribute("id", questionList[number].answers[2]);
-
-//       action = "stop";
-//       // action = "stop";
-//       // return (action = "stop");
-
-//       // just make arrays for everything like the questions
-//       // }
-
-//       //appends questionArray
-//       // container.append(questionArray);
-
-//       //idea -
-//       //create empty array, push into array, create new element???
-
-//       // maybe reference another function?
-//       // that gets called in a for loop
-
-//       //while action = null
-//       //while action !== stop
-//     }
-//   };
-
-//   //question generator
-
-//   initialButton.addEventListener("click", () => {
-//     questionGenerator();
-//     // action = null;
-//   });
-
-//   for (let i = 0; i < questionArray.length; i++) {
-//     action = null;
-
-//     questionGenerator();
-
-//     // let currentEnemy = enemyArray[i];
-//     // promptFunction(currentEnemy);
-//   }
-// }
-
-// ///////////////////////////////////////////////
