@@ -62,11 +62,6 @@ const questionList = [
     correctAnswer: "Brazil",
   },
   {
-    question: "What is in the middle of a field?",
-    answers: ["45", "90", "120"],
-    correctAnswer: "90",
-  },
-  {
     question:
       "From where can a substitute player enter the field during a match?",
     answers: ["Halfway-Line", "goal-line", "Anywhere"],
