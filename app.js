@@ -9,6 +9,8 @@
 // -ability to restart midgame
 // -new question adder (or option to pass on a current question being asked)
 
+alert("Press Start to Begin the Game!");
+
 const questionList = [
   {
     question: "Who is considered the greatest soccer player?",
@@ -59,7 +61,63 @@ const questionList = [
     answers: ["Germany", "England", "Brazil"],
     correctAnswer: "Brazil",
   },
-  // number: {
+  {
+    question: "What is in the middle of a field?",
+    answers: ["45", "90", "120"],
+    correctAnswer: "90",
+  },
+  {
+    question:
+      "From where can a substitute player enter the field during a match?",
+    answers: ["Halfway-Line", "goal-line", "Anywhere"],
+    correctAnswer: "Halfway-Line",
+  },
+  {
+    question:
+      "Can a referee overturn his decision after the match has restarted?",
+    answers: ["Yes", "No", "Depends"],
+    correctAnswer: "No",
+  },
+  {
+    question:
+      "Which position in soccer has to wear kits with different colours than the others?",
+    answers: ["Goalkeeper", "Striker", "Midfielder"],
+    correctAnswer: "Goalkeeper",
+  },
+  {
+    question:
+      "In the Summer Olympics, most of the soccer players must be under … years old.",
+    answers: ["25", "24", "23"],
+    correctAnswer: "23",
+  },
+  {
+    question:
+      "How many assistants are referees allowed to have during a match?",
+    answers: ["1", "2", "3"],
+    correctAnswer: "2",
+  },
+  {
+    question: "What is the maximum length for the halftime?",
+    answers: ["5", "10", "15"],
+    correctAnswer: "15",
+  },
+  {
+    question: "How does a soccer match begin?",
+    answers: ["tip-off", "kick-off", "toss-off"],
+    correctAnswer: "kick-off",
+  },
+  {
+    question: "Which former German soccer player was called “Der Kaiser”?",
+    answers: ["Beckenbauer", "Timo_Werner", "Stiltz"],
+    correctAnswer: "Beckenbauer",
+  },
+  {
+    question:
+      "What is it called when a player stands nearer to the goal line of the opponent than the second-last opponent and the ball?",
+    answers: ["Downfield", "Offside", "Upfield"],
+    correctAnswer: "Offside",
+  },
+  // {
   //   question: "How",
   //   answers: ["45", "90", "120"],
   //   correctAnswer: "90",
@@ -178,11 +236,17 @@ function questionDisplay(questionInput) {
   answerBcontainer.innerHTML = questionInput.answers[1];
   answerCcontainer.innerHTML = questionInput.answers[2];
 
-  buttonAcontainer.innerHTML = questionInput.answers[0];
+  buttonAcontainer.innerHTML = "Click Me!";
 
-  buttonBcontainer.innerHTML = questionInput.answers[1];
+  buttonBcontainer.innerHTML = "Click Me!";
 
-  buttonCcontainer.innerHTML = questionInput.answers[2];
+  buttonCcontainer.innerHTML = "Click Me!";
+
+  buttonAcontainer.setAttribute("id", questionInput.answers[0]);
+
+  buttonBcontainer.setAttribute("id", questionInput.answers[1]);
+
+  buttonCcontainer.setAttribute("id", questionInput.answers[2]);
 
   correctInput = questionInput.correctAnswer;
 
@@ -220,14 +284,17 @@ nextButton.addEventListener("click", clearScreen);
 addButton.addEventListener("click", () => {
   index++;
 
+  //new add
+  checkWinner();
+
   questionIterator();
 });
 
 ///////////////////////////////////////////////
 
 function answerChecker(event) {
-  if (event.currentTarget.innerText === correctInput) {
-    console.log("correct");
+  if (event.currentTarget.id === correctInput) {
+    alert("correct answer!!");
 
     // console.log(index);
     // console.log("~~~~~~~~~~~");
@@ -241,7 +308,7 @@ function answerChecker(event) {
 
     alert("now press clear question, and press add question after!");
   } else {
-    console.log("wrong");
+    alert("wrong answer!!");
 
     // console.log(event.currentTarget.innerText);
     // console.log(index);
@@ -260,6 +327,20 @@ function answerChecker(event) {
 
 // change button text to names
 
+///////////////////////////////////////////////
+//winning condition
+
+console.log(score);
+
+function checkWinner() {
+  if (score === 10) {
+    console.log("score");
+
+    console.log("~~~~~~~~~~~~~~~");
+
+    alert("You have won the game!!! Congratulations!!!");
+  }
+}
 ///////////////////////////////////////////////
 
 //answers - click function
@@ -285,3 +366,5 @@ buttonCcontainer.addEventListener("click", answerChecker);
 //git PAGES!!!!!!!!!!
 
 //check for bugs
+
+//needs a readMe
