@@ -166,3 +166,5 @@ the way youre iterating isnt working
 maybe put the for loop in the initial button and loop off of the question list that would make the most sense to me
 
 maybe create a next button to iterate???
+
+<!-- fix scoring bug issue -->

@@ -325,14 +325,8 @@ function answerChecker(event) {
 ///////////////////////////////////////////////
 //winning condition
 
-console.log(score);
-
 function checkWinner() {
   if (score === 10) {
-    console.log("score");
-
-    console.log("~~~~~~~~~~~~~~~");
-
     alert("You have won the game!!! Congratulations!!!");
   }
 }
@@ -348,16 +342,14 @@ buttonCcontainer.addEventListener("click", answerChecker);
 
 // console.log(correctInput);
 
-//now add winning conditions
-
 //check rubric
 
 //look in pseudocode for more ideas
 
 //add questions
 
-//git PAGES!!!!!!!!!!
-//git PAGES!!!!!!!!!!
+//score issue
+
 //git PAGES!!!!!!!!!!
 
 //check for bugs
