@@ -282,9 +282,10 @@ addButton.addEventListener("click", () => {
   //new add
   checkWinner();
 
+  //countdownTimer
   ///////////////////////////////////////////////
   let countdownTimer = 25;
-  let interval = setInterval(function () {
+  let interval = setInterval(() => {
     document.getElementById("countdownTimer").innerHTML = countdownTimer;
     countdownTimer--;
     if (countdownTimer === 0) {
@@ -293,9 +294,14 @@ addButton.addEventListener("click", () => {
       document.getElementById("countdownTimer").innerHTML =
         "Time is up! Move on to the next question";
 
-      alert("You're out of time!");
-
       score--;
+
+      scoreElement.innerText = score;
+
+      console.log(score);
+      console.log("~~~~~~");
+
+      alert("You're out of time!");
     }
   }, 1000);
   ///////////////////////////////////////////////
