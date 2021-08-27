@@ -282,6 +282,24 @@ addButton.addEventListener("click", () => {
   //new add
   checkWinner();
 
+  ///////////////////////////////////////////////
+  let countdownTimer = 25;
+  let interval = setInterval(function () {
+    document.getElementById("countdownTimer").innerHTML = countdownTimer;
+    countdownTimer--;
+    if (countdownTimer === 0) {
+      clearInterval(interval);
+
+      document.getElementById("countdownTimer").innerHTML =
+        "Time is up! Move on to the next question";
+
+      alert("You're out of time!");
+
+      score--;
+    }
+  }, 1000);
+  ///////////////////////////////////////////////
+
   questionIterator();
 });
 
@@ -339,6 +357,7 @@ buttonAcontainer.addEventListener("click", answerChecker);
 buttonBcontainer.addEventListener("click", answerChecker);
 
 buttonCcontainer.addEventListener("click", answerChecker);
+///////////////////////////////////////////////
 
 // console.log(correctInput);
 
