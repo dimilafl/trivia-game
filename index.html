@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" charset="utf-8" defer></script>
+    <title>My Random Trivia Game</title>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">My Random Trivia Game</h1>
+    </header>
+
+    <div class="score-container" align="right">Score</div>
+
+    <div class="top-container" align="center">
+      <h1 class="my-question" id="my-question">Question</h1>
+    </div>
+
+    <div class="answer-container" align="center">
+      <div>
+        <span class="answer-a" id="answer-a">Answer A</span>
+        <button class="button-a" id="button-a">Button A</button>
+      </div>
+
+      <div>
+        <span class="answer-b" id="answer-b">Answer B</span>
+
+        <button class="button-b" id="button-b">Button B</button>
+      </div>
+
+      <div>
+        <span class="answer-c" id="answer-c">Answer C</span>
+        <button class="button-c" id="button-c">Button C</button>
+      </div>
+    </div>
+
+    <div class="middle-container" align="center">
+      <button class="start-button">Start Game!</button>
+      <button class="next-button">Clear Question!</button>
+      <button class="add-button">Add New Question!</button>
+    </div>
+    <div class="bottom-container"></div>
+    <div id="countdownTimer" align="center">Timer</div>
+
+    <!-- empty classes below -->
+
+    <div class="class-a"></div>
+    <div class="class-b"></div>
+    <div class="class-c"></div>
+  </body>
+</html>

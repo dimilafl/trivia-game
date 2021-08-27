@@ -168,3 +168,93 @@ maybe put the for loop in the initial button and loop off of the question list t
 maybe create a next button to iterate???
 
 <!-- fix scoring bug issue -->
+
+Project Presentations
+It is a common practice on development teams to have a demo day every two weeks at the end of each development cycle (known as a sprint or iteration). On demo day, teams meet to share what they've accomplished during the current sprint.
+
+To prepare you for this, for project 1, you will give a demo of your project to your squad. Each person will be given approximately
+
+5 minutes to demonstrate their project
+
+Talk about some part of their code that they are particularly proud of, share their experiences working on the project, and answer questions from squad members.
+
+During presentations, there should be no working on your code while others are presenting. This is your chance to ask others how they tackled their project.
+
+Be prepared to answer questions like:
+
+<!-- What would you do differently? -->
+
+organize my plan better, use more descriptive variables, organize my code better -wasted a lot of time sifting thru code
+
+<!-- What are you most proud of?
+
+What would you do next?
+
+How did you plan your project?
+////a lot of pseudocode and  outlining
+
+
+What did you learn? 
+
+
+-->
+
+
+
+<!-- show a winning and losing round -->
+
+
+
+
+<!-- what technical difficulties did you have?/ what are you proud of? -->
+
+iterating from question to question was difficult because i didnt original keep my question list in an array
+
+I am proud of my iteration system, and DOM maniupulation, and scoring system
+
+
+<!-- future work for this project? -->
+
+catch any bugs
+
+add different subjects
+
+better styling
+
+animations and local storage, , better 
+sounds, 
+
+add pictures
+
+perfect scoring system, 
+randomizer function for questions
+
+make it so my timer ran initially
+
+<!-- Any questions???? -->
+<!-- Any questions???? -->
+<!-- Any questions???? -->
+
+
+Be prepared to answer questions like:
+
+<!-- What would you do differently? -->
+
+organize my plan better, use more descriptive variables, organize my code better -wasted a lot of time sifting thru code
+
+<!-- dont say -->
+show correct answer if time runs out
+<!-- scoring bug use correct attribute -->
+
+<!-- What are you most proud of?
+
+What would you do next?
+
+How did you plan your project?
+////a lot of pseudocode and  outlining
+
+
+What did you learn? 
+
+
+-->
