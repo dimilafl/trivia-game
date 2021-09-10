@@ -200,13 +200,18 @@ What did you learn?
 -->
 
 
-
+//share project link
 <!-- show a winning and losing round -->
 
 
 
 
 <!-- what technical difficulties did you have?/ what are you proud of? -->
+
+proud of my color switch for the correct answer 
+proud of my questionDisplay function since it allows me to iterate from question to question
+
+<!-- 1/2 portions specifically -->
 
 iterating from question to question was difficult because i didnt original keep my question list in an array
 

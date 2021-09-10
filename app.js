@@ -1,6 +1,6 @@
 ///////////////////////////////
 ////Minimum Viable Project Goals
-///////////////////////////////
+//////////////////////////////
 
 // Need to add questions and answers.
 // -input box or multiple choice selector for answers to questions - with feedback and score changes depending on whether the answer was right or wrong
